@@ -1,13 +1,31 @@
-#ifndef EXCEPTIONS_H
-#define EXCEPTIONS_H
+#ifndef ENROLLMENT_H
+#define ENROLLMENT_H
 
-#include<iostream>
+#include<string>
+#include "../Student.h"
+#include "Course.h"
 using namespace std;
-class CapacityExceededException{
+
+class Enrollment{
+    private:
+    Student*student;
+    Course*course;
+    string Enrollmentdate;
+    char Grade;
+    
     public:
-    void showError() const
+    Enrollment(Student*s, Course*c, string date, char g)
     {
-        cout<<"Error: Course Capacity Exceeded!"<<endl;
+        student = s;
+        course = c;
+        Enrollmentdate = date;
+        Grade = g;
+    }
+    void display()
+    {
+        cout<< "\nEnrollment Created\n";
+        cout<<"Date: "<<Enrollmentdate<<endl;
+        cout<<"Grade: "<<Grade<<endl;
     }
 };
-#endif
+  #endif
