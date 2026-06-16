@@ -1,31 +1,26 @@
-#ifndef FACULTY_H
-#define FACULTY_H
+#ifndef PERSON_H
+#define PERSON_H
 
-#include "Person.h"
-class Faculty : public Person
+#include <iostream>
+#include <string>
+using namespace std;
+class Person
 {
-    private:
-    string employeeID;
-    string Department;
-    string Designation;
-    string Assignedcourses[5];
-    public:
-    Faculty(string n, string c, int a, string con, string emp, string dep, string des) : Person(n, c, a, con)
+protected:
+    string name;
+    string cnic;
+    int age;
+    string contact;
+public:
+    Person(string n, string c, int a, string con)
     {
-        employeeID = emp;
-        Department = dep;
-        Designation = des;
+        name = n;
+        cnic = c;
+        age = a;
+        contact = con;
     }
-    void displayInfo() const override
-    {
-        cout << "\n===== Faculty =====\n";
-        cout << "Name: " << name << endl;
-        cout << "CNIC: " << cnic << endl;
-        cout << "Age " << age << endl;
-        cout << "Contact " << contact << endl;
-           cout << "Employee ID: " << employeeID << endl;
-        cout << "Department: " << Department << endl;
-        cout << "Designation: " << Designation << endl;
-    }
+    virtual void displayInfo() const = 0;
+    virtual ~Person() {}
 };
+
  #endif
