@@ -1,42 +1,60 @@
 #ifndef COURSE_H
 #define COURSE_H
 
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
+#include "Faculty.h"
+
 using namespace std;
-
-class Faculty;
-class Student;
-
 class Course{
     private:
-    string courseCode;
-    string courseName;
-    int creditHours;
-
-    Faculty* instructor;
-
-    int maxCapacity;
-    int enrolledCount;
-
-    static const int MAX_STUDENTS=50;
-    Student* enrolledStudents[MAX_Students];
+    string coursecode;
+    string coursename;
+    int credithours;
+    Faculty*instructor;
+    int maxcapacity;
+    int enrolledcount;
 
     public:
-    Course();
-    Course(string code,string name,int creditHours,Faculty* instructor,int maxCapacity);
+    Course(string code, string name, int credit, Faculty*inst, int maxcap )
+    {
+        coursecode = code;
+        coursename = name;
+        credithours = credit;
+        instructor = inst;
+        maxcapacity = maxcap;
+        enrolledcount = 0;
 
-    ~Course();
+    }
+    string getcoursecode() const
+    {
+        return coursecode;
+    }
+    void setcoursename(string name)
+    {
+        coursename = name;
+    }
+    bool operator ==(const Course& other)
+    {
+        return coursecode == other.coursecode;
+    }
+    //friend for private access
+    friend ostream& operator<<(ostream& out, const Course& c)
+    {
+        out << "\nCourse Code: " << c.coursecode << endl;
+        out << "Course name: " << c.coursename << endl;
+        out << "Credit hours: " << c.credithours << endl;
+         out << "Capacity: " << c.enrolledcount << "/" << c.maxcapacity << endl;
+         return out;
+    }
+    void enrollstudent()
+    {
+        if(enrolledcount >=maxcapacity)
+        {
+            throw 1;
+        }
+        enrolledcount++;
+    }
 
-    string getCourseCode() const;
-    string getCourseName() const;
-    int getCreditHours() const;
-    int getEnrolledCount() const;
-
-    void enrollStudent(Student* student);
-    bool operator==(const Course& other);
-    Student** operator+(Course& other);
-
-    friend ostream& operator<<(ostream& out,const Course& course)
 };
-#endif
+   #endif
