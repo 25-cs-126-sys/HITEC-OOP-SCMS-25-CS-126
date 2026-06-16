@@ -1,33 +1,31 @@
 #ifndef ENROLLMENT_H
 #define ENROLLMENT_H
 
-#include<iostream>
 #include<string>
+#include "../Student.h"
+#include "Course.h"
 using namespace std;
-
-class Student;
-class Course;
 
 class Enrollment{
     private:
-    Student* student;
-    Course* course;
-
-    string enrollmentDate;
-    char grade;
-
+    Student*student;
+    Course*course;
+    string Enrollmentdate;
+    char Grade;
+    
     public:
-    Enrollment();
-    Enrollment(Student* student,Course* course,string enrollmentDate,char grade);
-
-    ~Enrollment();
-
-    Student* getStudent() const;
-    Course* getCourse() const;
-    string getEnrollmentDate() const;
-    char getGrade() const;
-
-    void setGrade(char grade);
-    void displayEnrollment() const;
+    Enrollment(Student*s, Course*c, string date, char g)
+    {
+        student = s;
+        course = c;
+        Enrollmentdate = date;
+        Grade = g;
+    }
+    void display()
+    {
+        cout<< "\nEnrollment Created\n";
+        cout<<"Date: "<<Enrollmentdate<<endl;
+        cout<<"Grade: "<<Grade<<endl;
+    }
 };
-#endif
+  #endif
