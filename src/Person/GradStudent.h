@@ -1,18 +1,18 @@
 #ifndef GRADSTUDENT_H
 #define GRADSTUDENT_H
 
-#include "Student.h";
+#include "Student.h"
 class GradStudent:public Student
 {
     private:
-    string resarchTopic;
+    string researchTopic;
     string supervisor;
     public:
     GradStudent(string name,string cnic,int age,string contact,string rollNo,int semester,float gpa,string researchTopic,string supervisor);
 
     virtual ~GradStudent();
 
-    string getResearchTOpic() const;
+    string getResearchTopic() const;
     string getSupervisor() const;
     
     void setResearchTopic(string researchTopic);

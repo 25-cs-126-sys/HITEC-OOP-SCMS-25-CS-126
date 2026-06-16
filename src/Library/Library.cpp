@@ -31,6 +31,7 @@ void Library::displayAllItems() const
 }
 
 void Library::searchByTitle(string title) const
+{
    bool found=false;
    for(int i=0;i<itemCount;i++)
    {

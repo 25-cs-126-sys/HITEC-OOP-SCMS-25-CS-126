@@ -11,8 +11,7 @@ Faculty::Faculty(string name,string cnic,int age,string contact,string employeeI
     this->employeeID=employeeID;
     this->department=department;
     this->designation=designation;
-
-    courseCount-0;
+    this->courseCount=0;
 }
  Faculty::~Faculty()
  {
@@ -20,7 +19,7 @@ Faculty::Faculty(string name,string cnic,int age,string contact,string employeeI
 
  string Faculty::getEmployeeID() const
  {
-    return employeeID
+    return employeeID;
  }
  string Faculty::getDepartment()const
  {
@@ -39,7 +38,7 @@ Faculty::Faculty(string name,string cnic,int age,string contact,string employeeI
  }
  void Faculty::assignCourse(string courseName){
     if(courseCount<MAX_COURSES){
-    assignCourses[courseCount]=courseName;
+    assignedCourses[courseCount]=courseName;
     courseCount++;}
  }
  void Faculty::displayInfo() const
@@ -51,7 +50,7 @@ Faculty::Faculty(string name,string cnic,int age,string contact,string employeeI
      cout<<"Contact: "<<contact<<endl;
 
       cout<<"Employee ID: "<<employeeID<<endl;
-       cout<<"Department: "<<deparment<<endl;
+       cout<<"Department: "<<department<<endl;
         cout<<"Designation: "<<designation<<endl;
          cout<<"\nAssigned Courses:\n";
          if(courseCount==0)

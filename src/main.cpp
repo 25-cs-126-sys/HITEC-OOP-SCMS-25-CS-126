@@ -4,6 +4,9 @@
 #include "person/Faculty.h"
 #include "person/Staff.h"
 #include "person/GradStudent.h"
+#include "src\Library\Library.h"
+#include "Book.h"
+#include "Journal.h"
 
 using namespace std;
 int main(){
@@ -27,11 +30,19 @@ int main(){
    persons[2]=&st1;
    persons[3]=&g1;
 
+   cout<<"-------PERSONS INFORMATION--------\n";
    for(int i=0;i<4;i++)
    {
     persons[i]->displayInfo();
     cout<<endl;
    }
+   Library lib;
+   Book* b1=new Book(101,"C++ Object Oriented Programming","Robert Lafore",2020,"978-3-16","Computer Science",5);
+   Journal* j1=new Journal(201,"IEEE RESEARCH ON MATHS","Dr.Ahmad",2026,"ISSN-9988",15,2);
+   lib.addItem(b1);
+   lib.addItem(j1);
+   cout<<"\n=========LIBRARY MODULE============\n";
+   lib.displayAllItems();
 return 0;
    
 

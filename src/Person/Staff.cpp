@@ -37,13 +37,13 @@ void Staff::setSalary(double salary)
 }
 void Staff::displayInfo() const
 {
-    cout<<"\n===========STAFF INO===========\n";
+    cout<<"\n===========STAFF INFO===========\n";
     cout<<"Name: "<<name<<endl;
     cout<<"CNIC: "<<cnic<<endl;
     cout<<"Age: "<<age<<endl;
     cout<<"Contact: "<<contact<<endl;
 
-    cout<<"Staff ID: "<<StaffID<<endl;
+    cout<<"Staff ID: "<<staffID<<endl;
     cout<<"Role: "<<role<<endl;
     cout<<"Salary: "<<salary<<endl;
 }

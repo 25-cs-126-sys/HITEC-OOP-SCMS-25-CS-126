@@ -13,7 +13,7 @@ class Faculty:public Person
       int courseCount;
       public:
       Faculty();
-        Faculty(string name,string cnic,int age,string contact,string employeeID,string department,string designaton);
+        Faculty(string name,string cnic,int age,string contact,string employeeID,string department,string designation);
 
         virtual ~Faculty();
 

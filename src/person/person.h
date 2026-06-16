@@ -14,9 +14,9 @@ class Person{
     Person(string name,string cnic,int age,string contact);
     virtual ~Person();
     string getName() const;
-    string getCNIC() const
+    string getCNIC() const;
     int getAge() const;
     string getContact() const;
-    virtual void sisplayInfo() const=0;
+    virtual void displayInfo() const=0;
 };
 #endif

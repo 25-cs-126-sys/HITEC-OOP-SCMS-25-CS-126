@@ -1,5 +1,5 @@
 #include "Person.h"
-Person::Person
+Person::Person(string name,string cnic,int age,string contact)
 {
     this->name=name;
     this->cnic=cnic;
@@ -21,9 +21,9 @@ int Person::getAge() const
 {
     return age;
 }
-string Person::getAge() const
+string Person::getContact() const
 {
-    return age;
+    return contact;
 }
 string Person::getContact() const
 {

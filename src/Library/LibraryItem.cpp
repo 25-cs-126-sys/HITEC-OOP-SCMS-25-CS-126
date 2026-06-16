@@ -1,5 +1,5 @@
 #include "LibraryItem.h"
-LibraryItem::LibraryItem(int itemID,string title,string author,int publicaionYear)
+LibraryItem::LibraryItem(int itemID,string title,string author,int publicationYear)
 {
     this->itemID=itemID;
     this->title=title;

@@ -1,25 +1,24 @@
-#include "Journal.h"
-#include <iostream>
+#ifndef LIBRARY_H
+#define LIBRARY_H
+
+#include "LibraryItem.h"
+#include<string>
 
 using namespace std;
-Journal::Journal(int itemID,string title,string author,int publicationYear,string issn,int volume,int issueNumber):Libraryitem(itemID,title,author,publicationYear)
-{
-    this->issn=issn;
-    this->volume=volume;
-    this->issueNumber=issueNumber;
-}
-void Journal::checkout()
-{
-    cout<<"Journal checked out Successfully."<<endl;
-}
+class Library{
+    private:
+    LibraryItem* items[100];
+    int itemCount;
 
-void Journal::displayInfo() const
-{
-    cout"\n=============Journal Information============\n"<<endl;
-    cout<<"Item ID: "<<itemID<<endl;
-    cout<<"Title: "<<title<<endl;
-    cout<<"Author: "<<author<<endl;
-    cout<<"Publication Year: "<<publicationYear<<endl;
-    cout<<"ISSN: "<<issn<<endl;
-    cout<<"Issue Number: "<<issueNumber<<endl;
-}
+public:
+Library();
+~Library();
+
+void addItem(LibraryItem* item);
+void displayAllItems() const;
+void searchByTitle(string title) const;
+
+void savetoFile(string filename);
+void loadFromFile(string filename);
+};
+#endif

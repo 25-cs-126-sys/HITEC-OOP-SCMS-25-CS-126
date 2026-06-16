@@ -1,7 +1,8 @@
 #include "Student.h"
+#include<iostream>
 Student::Student():Person("","",0,"")
 {
-    rollno="";
+    rollNo="";
     semester=1;
     gpa=0.0;
     courseCount=0;
@@ -62,7 +63,7 @@ string contact,string rollNo,int semester,float gpa)
                     {
 cout<<"\n---------Student Info------------\n";
 cout<<"Name: "<<name<<endl;
-cout<<"CNIC": "<<cnic<<endl;
+cout<<"CNIC: "<<cnic<<endl;
 cout<<"Age: "<<age<<endl;
 cout<<"Contact: "<<contact<<endl;
 cout<<"Roll No: "<<rollNo<<endl;
