@@ -2,27 +2,33 @@
 #define STAFF_H
 
 #include "Person.h"
-class Staff:public Person
+class Staff : public Person
 {
-    protected:
+private:
     string staffID;
     string role;
     double salary;
-
     public:
-    Staff();
-    Staff(string name,string cnic,int age,string contact,string staffID,string role,double salary);
+    Staff(string n, string c, int a, string con,
+          string id, string r, double s)
+        : Person(n, c, a, con)
+    {
+        staffID = id;
+        role = r;
+        salary = s;
+    }
 
-    virtual ~Staff();
-
-    string getStaffID() const;
-    string getRole() const;
-    double getSalary() const;
-
-    void setRole(string role);
-    void setSalary(double salary);
-
-    void displayInfo() const override;
-
+    void displayInfo() const override
+    {
+        cout << "\n===== Staff =====\n";
+        cout << "Name: " << name << endl;
+        cout << "CNIC: " << cnic << endl;
+        cout << "Age: " << age << endl;
+        cout << "Contact: " << contact << endl;
+        cout << "Staff ID: " << staffID << endl;
+        cout << "Role: " << role << endl;
+        cout << "Salary: " << salary << endl;
+    }
 };
+
 #endif

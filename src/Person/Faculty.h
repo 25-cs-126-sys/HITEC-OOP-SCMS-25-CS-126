@@ -1,29 +1,31 @@
 #ifndef FACULTY_H
 #define FACULTY_H
+
 #include "Person.h"
-class Faculty:public Person
+class Faculty : public Person
 {
-    protected:
-      string employeeID;
-      string department;
-      string designation;
-
-      static const int MAX_COURSES=10;
-      string assignedCourses[MAX_COURSES];
-      int courseCount;
-      public:
-      Faculty();
-        Faculty(string name,string cnic,int age,string contact,string employeeID,string department,string designation);
-
-        virtual ~Faculty();
-
-        string getEmployeeID() const;
-        string getDepartment() const;
-        string getDesignation() const;
-
-        void setDepartment(string department);
-        void setDesignation(string designation);
-        void assignCourse(string courseName);
-        void displayInfo() const override;
+    private:
+    string employeeID;
+    string Department;
+    string Designation;
+    string Assignedcourses[5];
+    public:
+    Faculty(string n, string c, int a, string con, string emp, string dep, string des) : Person(n, c, a, con)
+    {
+        employeeID = emp;
+        Department = dep;
+        Designation = des;
+    }
+    void displayInfo() const override
+    {
+        cout << "\n===== Faculty =====\n";
+        cout << "Name: " << name << endl;
+        cout << "CNIC: " << cnic << endl;
+        cout << "Age " << age << endl;
+        cout << "Contact " << contact << endl;
+           cout << "Employee ID: " << employeeID << endl;
+        cout << "Department: " << Department << endl;
+        cout << "Designation: " << Designation << endl;
+    }
 };
-#endif
+ #endif
