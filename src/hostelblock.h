@@ -1,6 +1,6 @@
 #ifndef HOSTELBLOCK_H
 #define HOSTELBLOCK_H
-#include "Room.h" // Ya jo bhi aapki room wali file ka sahi path hai
+#include "src/PERSON HIREARCHY/Hostel/room.h"
 #include<iostream>
 #include<string>
 using namespace std;
@@ -8,7 +8,7 @@ using namespace std;
 class HostelBlock{
     private:
     string blockName;
-    Room rooms[10];
+    room rooms[10];
 
     public:
     HostelBlock()

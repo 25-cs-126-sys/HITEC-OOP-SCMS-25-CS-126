@@ -1,7 +1,11 @@
-#include<iostream>
-#include "Person/Student.h"
-#include "Person/Faculty.h"
-#include "Person/Hostel/hostelblock.h"
+#include <iostream>
+#include<cstdlib>
+#include "src\PERSON HIREARCHY\student.h"
+#include "PERSON HIREARCHY/Faculty.h"
+#include "Course/Course.h"
+#include "Library/Book.h"
+#include "Finance/Feerecord.h"
+#include "src\hostelblock.h"
 #include "utilities/Reports.h"
 
 using namespace std;
