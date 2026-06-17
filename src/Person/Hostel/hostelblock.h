@@ -1,8 +1,8 @@
 #ifndef HOSTELBLOCK_H
 #define HOSTELBLOCK_H
+#include "Room.h" // Ya jo bhi aapki room wali file ka sahi path hai
 #include<iostream>
 #include<string>
-#include "Room.h"
 using namespace std;
 
 class HostelBlock{

@@ -1,5 +1,5 @@
-ifndef ACCOMMODATION_H
-#define ACCOMMODATION_H
+#ifndef ACCOMODATION_H
+#define ACCOMODATION_H
 
 class Accommodation
 {
