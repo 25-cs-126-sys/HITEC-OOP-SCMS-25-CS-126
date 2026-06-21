@@ -1,1 +1,8 @@
-node_modules/
+*.o
+*.exe
+*.out
+a.out
+build/
+.vscode/
+.DS_Store
+OOP_Project_Instructions_HITEC.pdf

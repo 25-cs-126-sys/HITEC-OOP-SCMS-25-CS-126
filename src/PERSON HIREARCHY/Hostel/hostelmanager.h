@@ -3,7 +3,7 @@
 #include<iostream>
 #include "Accommodation.h"
 #include "Reportable.h"
-#include "hostelblock.h"
+#include "../../hostelblock.h"
 using namespace std;
 
 class HostelManager : public Accommodation, public Reportable

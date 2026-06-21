@@ -2,7 +2,7 @@
 #define ENROLLMENT_H
 
 #include<string>
-#include "../Student.h"
+#include "../PERSON HIREARCHY/student.h"
 #include "Course.h"
 using namespace std;
 

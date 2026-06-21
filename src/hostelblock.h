@@ -1,6 +1,6 @@
 #ifndef HOSTELBLOCK_H
 #define HOSTELBLOCK_H
-#include "src/PERSON HIREARCHY/Hostel/room.h"
+#include "PERSON HIREARCHY/Hostel/room.h"
 #include<iostream>
 #include<string>
 using namespace std;
@@ -8,7 +8,7 @@ using namespace std;
 class HostelBlock{
     private:
     string blockName;
-    room rooms[10];
+    Room rooms[10];
 
     public:
     HostelBlock()
